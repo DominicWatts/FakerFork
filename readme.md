@@ -1,57 +1,8 @@
 # Faker
-
-[![Monthly Downloads](https://poser.pugx.org/fzaninotto/faker/d/monthly.png)](https://packagist.org/packages/fzaninotto/faker)
-[![Continuous Integration](https://github.com/fzaninotto/Faker/workflows/Continuous%20Integration/badge.svg?branch=master)](https://github.com/fzaninotto/Faker/actions)
-[![codecov](https://codecov.io/gh/fzaninotto/Faker/branch/master/graph/badge.svg)](https://codecov.io/gh/fzaninotto/Faker)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/eceb78a9-38d4-4ad5-8b6b-b52f323e3549/mini.png)](https://insight.sensiolabs.com/projects/eceb78a9-38d4-4ad5-8b6b-b52f323e3549)
-
-Faker is a PHP library that generates fake data for you. Whether you need to bootstrap your database, create good-looking XML documents, fill-in your persistence to stress test it, or anonymize data taken from a production service, Faker is for you.
-
-Faker is heavily inspired by Perl's [Data::Faker](http://search.cpan.org/~jasonk/Data-Faker-0.07/), and by ruby's [Faker](https://rubygems.org/gems/faker).
-
-Faker requires PHP >= 5.3.3.
-
-**Faker is archived**. Read the reasons behind this decision here: [https://marmelab.com/blog/2020/10/21/sunsetting-faker.html](https://marmelab.com/blog/2020/10/21/sunsetting-faker.html) 
-
-# Table of Contents
-
-- [Installation](#installation)
-- [Basic Usage](#basic-usage)
-- [Formatters](#formatters)
-	- [Base](#fakerproviderbase)
-	- [Lorem Ipsum Text](#fakerproviderlorem)
-	- [Person](#fakerprovideren_usperson)
-	- [Address](#fakerprovideren_usaddress)
-	- [Phone Number](#fakerprovideren_usphonenumber)
-	- [Company](#fakerprovideren_uscompany)
-	- [Real Text](#fakerprovideren_ustext)
-	- [Date and Time](#fakerproviderdatetime)
-	- [Internet](#fakerproviderinternet)
-	- [User Agent](#fakerprovideruseragent)
-	- [Payment](#fakerproviderpayment)
-	- [Color](#fakerprovidercolor)
-	- [File](#fakerproviderfile)
-	- [Image](#fakerproviderimage)
-	- [Uuid](#fakerprovideruuid)
-	- [Barcode](#fakerproviderbarcode)
-	- [Miscellaneous](#fakerprovidermiscellaneous)
-	- [Biased](#fakerproviderbiased)
-	- [Html Lorem](#fakerproviderhtmllorem)
-- [Modifiers](#modifiers)
-- [Localization](#localization)
-- [Populating Entities Using an ORM or an ODM](#populating-entities-using-an-orm-or-an-odm)
-- [Seeding the Generator](#seeding-the-generator)
-- [Faker Internals: Understanding Providers](#faker-internals-understanding-providers)
-- [Real Life Usage](#real-life-usage)
-- [Language specific formatters](#language-specific-formatters)
-- [Third-Party Libraries Extending/Based On Faker](#third-party-libraries-extendingbased-on-faker)
-- [License](#license)
-
-
 ## Installation
 
 ```sh
-composer require fzaninotto/faker
+composer require dominicwatts/fakerfork
 ```
 
 ## Basic Usage
