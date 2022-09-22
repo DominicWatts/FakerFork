@@ -2,6 +2,7 @@
     "name": "dominicwatts/fakerfork",
     "type": "library",
     "description": "Faker is a PHP library that generates fake data for you.",
+    "version": "1.0.0",
     "keywords": [
         "faker",
         "fixtures",
