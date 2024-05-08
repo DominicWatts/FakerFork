@@ -501,7 +501,6 @@ class Base
             return Base::randomElement(str_split($matches[1]));
         }, $regex);
         // replace \d with number and \w with letter and . with ascii
-        //$callback =  str_replace('static::' , self::class.'::' , $callback);
         $regex = preg_replace_callback('/\\\w/', self::class.'::'.'randomLetter', $regex);
         $regex = preg_replace_callback('/\\\d/', self::class.'::'.'randomDigit', $regex);
         $regex = preg_replace_callback('/(?<!\\\)\./', self::class.'::'.'randomAscii', $regex);
