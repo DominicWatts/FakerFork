@@ -139,7 +139,7 @@ class Base
         $max = $int1 < $int2 ? $int2 : $int1;
         return mt_rand($min, $max);
     }
-    
+
     /**
      * Returns the passed value
      *
@@ -354,6 +354,7 @@ class Base
         }
         for ($i = $pos, $last = strrpos($string, $wildcard, $pos) + 1; $i < $last; $i++) {
             if ($string[$i] === $wildcard) {
+                $callback =  str_replace('static::' , self::class.'::' , $callback);
                 $string[$i] = call_user_func($callback);
             }
         }
@@ -500,9 +501,9 @@ class Base
             return Base::randomElement(str_split($matches[1]));
         }, $regex);
         // replace \d with number and \w with letter and . with ascii
-        $regex = preg_replace_callback('/\\\w/', 'static::randomLetter', $regex);
-        $regex = preg_replace_callback('/\\\d/', 'static::randomDigit', $regex);
-        $regex = preg_replace_callback('/(?<!\\\)\./', 'static::randomAscii', $regex);
+        $regex = preg_replace_callback('/\\\w/', self::class.'::'.'randomLetter', $regex);
+        $regex = preg_replace_callback('/\\\d/', self::class.'::'.'randomDigit', $regex);
+        $regex = preg_replace_callback('/(?<!\\\)\./', self::class.'::'.'randomAscii', $regex);
         // remove remaining backslashes
         $regex = str_replace('\\', '', $regex);
         // phew
